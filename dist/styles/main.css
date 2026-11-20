@@ -389,6 +389,7 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
 @media (max-width: 560px) {
   :root { --gutter: 20px; --space: 78px; }
   body { font-size: 15px; }
+  img { height: auto; }
   h2 { font-size: clamp(2.75rem, 14vw, 4.4rem); }
   .site-header, .site-header.is-scrolled { height: 72px; }
   .site-header__inner { padding-inline: 20px; }
@@ -397,18 +398,19 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
   .brand strong { font-size: .78rem; }
   .brand small { font-size: .54rem; }
   .header-book { display: none; }
-  .hero { min-height: 820px; }
+  .hero { min-height: 0; display: flex; flex-direction: column; overflow: visible; background: var(--ivory); }
   .hero::before { display: none; }
-  .hero__image { object-position: 64% center; }
-  .hero__wash { background: linear-gradient(90deg, rgba(250,248,241,1) 0%, rgba(250,248,241,.93) 68%, rgba(250,248,241,.48)); }
-  .hero__content { min-height: 820px; padding: 88px 5px 62px; }
-  .hero__content::before { top: 12%; bottom: 11%; left: -35px; width: calc(100% + 25px); opacity: .94; }
+  .hero__image { position: relative; inset: auto; order: 2; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 52% center; }
+  .hero__wash { display: none; }
+  .hero__content { order: 1; width: 100%; min-height: 0; margin: 0; padding: 105px 20px 50px; background: var(--ivory); }
+  .hero__content::before { display: none; }
+  .hero__content > * { max-width: 100%; }
   .hero__mark { width: 58px; }
   .hero h1 span { font-size: 2.5rem; }
   .hero__statement { font-size: 1.9rem; }
   .hero__copy { max-width: 335px; font-size: 1.04rem; line-height: 1.72; }
   .hero__folio { display: none; }
-  .booking-wrap { width: calc(100% - 24px); }
+  .booking-wrap { width: calc(100% - 24px); margin-top: 0; }
   .booking-bar { grid-template-columns: 1fr; padding: 14px; }
   .booking-bar label { padding: 12px 8px; border-right: 0; border-bottom: 1px solid var(--line); }
   .booking-bar .button { grid-column: auto; }

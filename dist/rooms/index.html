@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Discover room types, visual atmospheres and views at Pousada do Silêncio in Coloane, Macao.">
+  <meta name="theme-color" content="#faf8f1">
+  <title>Rooms at Pousada do Silêncio</title>
+  <link rel="icon" href="/public/images/brand/logo-lockup.png" type="image/png">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/rooms.css">
+  <script type="module" src="/components/site-header.js"></script>
+  <script type="module" src="/components/site-footer.js"></script>
+  <script type="module" src="/pages/rooms.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <site-header></site-header>
+  <main id="main" class="rooms-page" data-rooms-index>
+    <section class="rooms-hero" id="top" aria-labelledby="rooms-page-title">
+      <div class="rooms-hero__copy">
+        <p class="eyebrow">The rooms · Coloane, Macao</p>
+        <h1 id="rooms-page-title">Rooms at<br>Pousada do Silêncio</h1>
+        <p>Designed for slow mornings, quiet evenings and a deeper connection with Coloane.</p>
+        <a class="text-link" href="#atmospheres">Begin with an atmosphere <span>↘</span></a>
+      </div>
+      <div class="rooms-hero__collage" aria-label="Forest, Sea Breeze and Nostalgia room atmosphere illustrations">
+        <figure><img src="/public/images/rooms/forest-room.webp" alt="Official watercolour Forest Room illustration"><figcaption>Forest</figcaption></figure>
+        <figure><img src="/public/images/rooms/sea-breeze-room.webp" alt="Official watercolour Sea Breeze Room illustration"><figcaption>Sea Breeze</figcaption></figure>
+        <figure><img src="/public/images/rooms/nostalgia-room.webp" alt="Official watercolour Nostalgia Room illustration"><figcaption>Nostalgia</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section room-system" aria-labelledby="room-system-title">
+      <div class="room-system__intro"><p class="eyebrow">Three separate choices</p><h2 id="room-system-title">Shape the Stay<br>That Suits You</h2><p>The experience unfolds in three simple layers—each with a different purpose.</p></div>
+      <div class="room-system__steps">
+        <article><span>01</span><h3>Room Type</h3><p>Choose the space and sleeping arrangement you need.</p></article>
+        <article><span>02</span><h3>Atmosphere</h3><p>Choose the visual character and, separately, an optional fragrance preference.</p></article>
+        <article><span>03</span><h3>View</h3><p>Understand possible outlooks, subject to availability and room orientation.</p></article>
+      </div>
+    </section>
+
+    <section class="atmosphere-discovery" id="atmospheres" aria-labelledby="atmospheres-page-title">
+      <div class="section atmosphere-discovery__head"><div><p class="eyebrow">First · visual character</p><h2 id="atmospheres-page-title">Choose Your<br>Atmosphere</h2></div><p>How would you like Coloane to feel?</p></div>
+      <div class="section atmosphere-discovery__list" data-atmosphere-list></div>
+      <p class="section atmosphere-status" data-atmosphere-status role="status">Choose an atmosphere to carry it forward to the room type pages.</p>
+      <aside class="section fragrance-note"><strong>Fragrance is always optional.</strong><span>Room atmosphere and fragrance preference are separate choices. Guests may request fragrance removal where practical, while designated fragrance-free King Rooms are also available.</span></aside>
+    </section>
+
+    <section class="room-discovery" id="find-your-room" aria-labelledby="find-room-title">
+      <div class="section room-discovery__head"><div><p class="eyebrow">Second · space and sleeping arrangement</p><h2 id="find-room-title">Find Your Room</h2></div><p>These are the accommodation types themselves. Every starting price shown is a room-only rate.</p></div>
+      <div class="section room-offer-list" data-room-list></div>
+    </section>
+
+    <section class="section rooms-view-section" aria-labelledby="rooms-view-title">
+      <div class="rooms-view-section__head"><div><p class="eyebrow">Third · the scene outside</p><h2 id="rooms-view-title">Choose Your View</h2></div><p>Turn from Coloane’s village streets and wooded hills toward the quiet open coast.</p></div>
+      <div class="view-explorer" data-view-explorer></div>
+    </section>
+
+    <section class="room-comparison" aria-labelledby="compare-title">
+      <div class="section room-comparison__head"><div><p class="eyebrow">A simple side-by-side</p><h2 id="compare-title">Compare the Rooms</h2></div><p>Only the practical essentials, so the difference between room types stays clear.</p></div>
+      <div class="section comparison-table" aria-label="Room type comparison">
+        <div class="comparison-row comparison-row--head" aria-hidden="true"><strong>Room</strong><span>Area</span><span>Bed</span><span>Guests</span><span>Room-only rate</span><span></span></div>
+        <div data-comparison></div>
+      </div>
+    </section>
+
+    <section class="rooms-closing"><img src="/public/images/rooms/sea-breeze-room.webp" alt=""><div><p class="eyebrow">A room is only the beginning</p><h2>Stay Slowly,<br>Wake Gently</h2><p>Choose the room type you need, then make its visual atmosphere and preferences your own.</p><a class="button button--solid" href="/book/">Check Availability</a></div></section>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>

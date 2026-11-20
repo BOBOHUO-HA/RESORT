@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Pousada do Silêncio is an aromatic eco-boutique retreat inspired by the coast, countryside and cultural memory of Coloane, Macao.">
+  <meta name="theme-color" content="#faf8f1">
+  <title>Pousada do Silêncio | Boutique Hotel in Coloane</title>
+  <link rel="icon" href="./public/images/brand/logo-lockup.png" type="image/png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script type="module" src="./components/site-header.js"></script>
+  <script type="module" src="./components/booking-bar.js"></script>
+  <script type="module" src="./components/site-footer.js"></script>
+  <script type="module" src="./pages/home.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero__image" src="./public/images/hotel/hotel-exterior.webp" alt="Watercolour view of Pousada do Silêncio with Portuguese arcades, green shutters and bougainvillea beside the Coloane coast" fetchpriority="high" decoding="async">
+      <div class="hero__wash"></div>
+      <div class="hero__content">
+        <p class="eyebrow">Aromatic Eco-Boutique Hotel · Coloane, Macao</p>
+        <h1 id="hero-title"><span>Pousada do Silêncio</span><small>竹灣隱舍</small></h1>
+        <p class="hero__statement">Discover Coloane<br>Through Its Scents</p>
+        <p class="hero__copy">A quiet boutique retreat shaped by the coast, countryside and cultural memory of Coloane.</p>
+        <div class="button-row"><a class="button button--solid" href="/book/">Book Your Stay</a><a class="text-link" href="#hotel">Discover the Hotel <span>↘</span></a></div>
+      </div>
+      <p class="hero__folio" aria-hidden="true">A hand-painted stay · Cheoc Van</p>
+    </section>
+
+    <div class="booking-wrap reveal"><booking-bar></booking-bar></div>
+
+    <section class="section intro" id="hotel" aria-labelledby="intro-title">
+      <div class="section-kicker"><span>01</span><p>The hotel</p></div>
+      <div class="intro__heading reveal">
+        <p class="eyebrow">A retreat between village and sea</p>
+        <h2 id="intro-title">A Quiet Side<br>of Macao</h2>
+      </div>
+      <div class="intro__copy reveal">
+        <p class="lead">Pousada do Silêncio is a proposed four-star boutique leisure hotel near Cheoc Van Beach in Coloane.</p>
+        <p>It brings together accommodation, local culture, optional sensory experiences and slow exploration of the surrounding community—giving each guest room to notice what is usually passed by.</p>
+        <a class="text-link" href="/hotel/">Read our story <span>→</span></a>
+      </div>
+      <div class="values reveal" aria-label="Hotel values">
+        <span>Coast</span><i></i><span>Nature</span><i></i><span>Scent</span><i></i><span>Craft</span><i></i><span>Community</span>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story__art reveal" aria-hidden="true">
+        <div class="story__circle"><img src="./public/images/brand/logo-lockup.png" alt="Official 竹灣隱舍 · Pousada do Silêncio mark" loading="lazy" decoding="async"></div>
+        <svg viewBox="0 0 600 250"><path d="M12 188c76-59 132-48 198 3 64 49 121 43 171-16 48-56 101-58 207-2"/><path d="M26 215c71-47 132-37 196 10 58 42 119 34 165-13 50-52 111-57 188-13"/></svg>
+      </div>
+      <div class="story__content reveal">
+        <p class="eyebrow">The mark we carry</p>
+        <h2 id="story-title">Inspired by Coloane</h2>
+        <p>The emblem is a small landscape: coastal waves below bamboo leaves, held together by a warm, flowing line. It speaks of scent moving through air—and of a hotel connected to its community and environment.</p>
+        <div class="story__notes"><span>Coast / waves</span><span>Nature / bamboo</span><span>Memory / scent</span><span>Community / circle</span></div>
+      </div>
+    </section>
+
+    <section class="dining-preview" id="dining" aria-labelledby="dining-title">
+      <div class="dining-preview__image reveal">
+        <img src="./public/images/dining/restaurant-overview.webp" alt="Watercolor view of the second-floor restaurant with arched green windows, Portuguese tiles and Coloane coastal views" loading="lazy" decoding="async" data-dining-alt>
+      </div>
+      <div class="dining-preview__content reveal">
+        <p class="eyebrow">Second-floor dining · Coast in view</p>
+        <h2 id="dining-title">Dining at<br>Pousada</h2>
+        <p class="dining-preview__lead">A quiet room above the arcades, where coastal light settles across timber tables and hand-painted Portuguese tiles.</p>
+        <p>Natural wood, woven rattan and open arched windows create an unhurried dining atmosphere shaped by the colours and character of Coloane.</p>
+        <a class="text-link" href="/hotel/#restaurant">Discover Our Restaurant</a>
+      </div>
+    </section>
+
+    <section class="section atmospheres" id="rooms" aria-labelledby="atmospheres-title">
+      <div class="section-kicker"><span>02</span><p>Room atmospheres</p></div>
+      <div class="section-heading reveal"><p class="eyebrow">Three ways to settle in</p><h2 id="atmospheres-title">How Would You Like<br>Coloane to Feel?</h2><p>Choose a visual atmosphere that suits your stay. Fragrance is always optional; designated fragrance-free King Rooms are available.</p></div>
+      <div class="atmosphere-grid" data-atmospheres></div>
+      <p class="fine-print reveal"><span>Note</span> Atmospheres are not room types, and incense is never burned in guestrooms.</p>
+    </section>
+
+    <section class="room-types" aria-labelledby="rooms-title">
+      <div class="room-types__head section reveal"><div><p class="eyebrow">The rooms themselves</p><h2 id="rooms-title">Find Your Room</h2></div><p>Four practical room types, each interpreted through the quiet material language of the hotel.</p></div>
+      <div class="room-grid section" data-rooms></div>
+    </section>
+
+    <section class="section view-studies" aria-labelledby="views-title">
+      <div class="section-kicker"><span>03</span><p>Window studies</p></div>
+      <div class="view-studies__head reveal"><div><p class="eyebrow">A glimpse beyond the room</p><h2 id="views-title">Choose the View<br>That Slows You Down</h2></div><p>A future stay may begin with the scene outside: village lanes and wooded hills, or the open blue of the Coloane coast.</p></div>
+      <div class="view-studies__grid">
+        <figure class="view-card reveal"><img src="./public/images/rooms/window-a.webp" alt="Window A study showing timber shutters opening onto a Coloane street and hills" loading="lazy" decoding="async"><figcaption><span>Window A</span><strong>Street & Hills</strong></figcaption></figure>
+        <figure class="view-card reveal" style="--delay:90ms"><img src="./public/images/rooms/window-b.webp" alt="Window B study showing an arched window and the Coloane sea" loading="lazy" decoding="async"><figcaption><span>Window B</span><strong>Sea View</strong></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="journeys" id="journeys" aria-labelledby="journeys-title">
+      <div class="journeys__intro section reveal">
+        <div class="section-kicker section-kicker--light"><span>04</span><p>Curated journeys</p></div>
+        <div><p class="eyebrow">Step into the landscape</p><h2 id="journeys-title">Go Beyond<br>the Room</h2></div>
+        <div><p>Curated journeys through Coloane's coast, countryside and cultural memory.</p><a class="text-link text-link--light" href="/journeys/">Explore Journeys <span>→</span></a></div>
+      </div>
+      <div class="journey-list section" id="journey-list" data-journeys></div>
+    </section>
+
+    <section class="section experiences" id="experiences" aria-labelledby="experiences-title">
+      <div class="section-kicker"><span>05</span><p>Small rituals</p></div>
+      <div class="section-heading section-heading--row reveal"><div><p class="eyebrow">Made for slower days</p><h2 id="experiences-title">Experience Coloane</h2></div><p>Thoughtful additions to a stay, led by place rather than schedule.</p></div>
+      <div class="experience-list" data-experiences></div>
+    </section>
+
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div class="shop__intro reveal"><p class="eyebrow">A small collection</p><h2 id="shop-title">Take Coloane Home</h2><p>Objects that hold a trace of the island—made to be used, kept and remembered.</p><a class="button button--outline" href="/shop/">Visit the Shop</a></div>
+      <div class="shop__shelf" id="shop-list" data-products></div>
+    </section>
+
+    <section class="section scent" id="scent" aria-labelledby="scent-title">
+      <div class="scent__visual reveal" aria-hidden="true"><span class="scent__ring"></span><span class="scent__leaf scent__leaf--one"></span><span class="scent__leaf scent__leaf--two"></span><span class="scent__line"></span><p>FOREST<br><em>SEA BREEZE</em><br>NOSTALGIA</p></div>
+      <div class="scent__content reveal">
+        <p class="eyebrow">A preview of your personal path</p>
+        <h2 id="scent-title">Find Your<br>Coloane Scent</h2>
+        <p>Answer a few simple questions and discover the room atmosphere that feels most like you.</p>
+        <fieldset class="scent-choice"><legend>Choose the feeling you need today</legend><button type="button" data-scent-choice="forest">Stillness</button><button type="button" data-scent-choice="sea-breeze">Lightness</button><button type="button" data-scent-choice="nostalgia">Warmth</button></fieldset>
+        <p class="scent-result" data-scent-result role="status">Your path is waiting.</p>
+        <a class="button button--solid" href="/find-your-scent/" data-full-quiz>Find My Scent</a>
+      </div>
+    </section>
+
+    <section class="floor" id="coloane" aria-labelledby="floor-title">
+      <div class="floor__head section reveal"><div><p class="eyebrow">Ground floor notebook</p><h2 id="floor-title">Step Inside<br>Pousada do Silêncio</h2></div><p>Move through a sequence of spaces made for arrival, conversation, reading and quiet craft.</p></div>
+      <div class="floor__map reveal">
+        <img src="./public/images/hotel/ground-floor-plan.webp" alt="Official watercolour ground-floor plan showing the arcade, scent foyer, reception, reading lounge, shop and sensory workshop" loading="lazy" decoding="async">
+        <div class="map-pins" aria-label="Ground floor places">
+          <button style="--x:51%;--y:88%"><span>1</span><b>Portuguese Arcade</b></button>
+          <button style="--x:51%;--y:67%"><span>2</span><b>Scent Foyer</b></button>
+          <button style="--x:60%;--y:53%"><span>3</span><b>Reception</b></button>
+          <button style="--x:43%;--y:53%"><span>4</span><b>Reading Lounge</b></button>
+          <button style="--x:30%;--y:54%"><span>5</span><b>Local Shop</b></button>
+          <button style="--x:51%;--y:12%"><span>6</span><b>Sensory Workshop</b></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="book" aria-labelledby="book-title">
+      <img src="./public/images/hotel/hotel-exterior.webp" alt="" loading="lazy" decoding="async">
+      <div class="final-cta__content reveal"><p class="eyebrow">Coloane is closer than it feels</p><h2 id="book-title">Your Coloane Journey<br>Begins Here</h2><p>Stay slowly. Explore deeply. Take a little of Coloane home.</p><div class="button-row"><a class="button button--solid" href="/book/">Book Your Stay</a><a class="button button--paper" href="/rooms/">Explore Rooms</a></div></div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <a class="mobile-book" href="/book/">Book Your Stay</a>
+</body>
+</html>

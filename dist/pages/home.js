@@ -26,10 +26,27 @@ roomRoot.innerHTML = rooms.map((room, index) => `
   </article>`).join('');
 
 const journeyRoot = document.querySelector('[data-journeys]');
+const journeyImageAlt = journey => journey.slug === 'nature-escape'
+  ? c(
+      'Watercolor coastal journey through shaded Coloane trails to Cheoc Van Beach',
+      '从路环林荫步道走向竹湾海滩的水彩自然旅程',
+      '從路環林蔭步道走向竹灣海灘的水彩自然旅程'
+    )
+  : c(
+      'Watercolor cultural journey through Coloane Village, heritage shipyards and local craft',
+      '穿行路环村落、历史船厂与本地手作的水彩文化旅程',
+      '穿行路環村落、歷史船廠與本地手作的水彩文化旅程'
+    );
 journeyRoot.innerHTML = journeys.map((journey, index) => `
   <article class="journey-card journey-card--${journey.color} reveal" style="--delay:${index * 100}ms">
-    <div class="journey-card__route" aria-hidden="true"><span>${journey.number}</span><svg viewBox="0 0 300 150"><path d="M8 ${105-index*10} C75 ${30+index*20}, 128 ${130-index*12}, 194 ${55+index*16} S270 45, 292 ${20+index*30}"/><circle cx="9" cy="${105-index*10}" r="5"/><circle cx="292" cy="${20+index*30}" r="5"/></svg></div>
-    <div><p>Watercolour route · ${journey.number}</p><h3>${journey.title}</h3><p>${journey.detail}</p><a href="/journeys/${journey.slug}/" aria-label="Explore ${journey.title}">Open the route <span>↗</span></a></div>
+    <figure class="journey-card__media">
+      <img src="${journey.image}" alt="${journeyImageAlt(journey)}" loading="lazy" decoding="async">
+      <span aria-hidden="true">${journey.number}</span>
+    </figure>
+    <div class="journey-card__body">
+      <div class="journey-card__route" aria-hidden="true"><svg viewBox="0 0 300 72"><path d="M8 ${52-index*6} C75 ${12+index*12}, 128 ${66-index*8}, 194 ${26+index*10} S270 22, 292 ${10+index*18}"/><circle cx="9" cy="${52-index*6}" r="5"/><circle cx="292" cy="${10+index*18}" r="5"/></svg></div>
+      <p>Watercolour route · ${journey.number}</p><h3>${journey.title}</h3><p>${journey.detail}</p><a href="/journeys/${journey.slug}/" aria-label="Explore ${journey.title}">Open the route <span>↗</span></a>
+    </div>
   </article>`).join('');
 
 const experienceRoot = document.querySelector('[data-experiences]');

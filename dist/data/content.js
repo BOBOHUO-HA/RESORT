@@ -1,8 +1,9 @@
 export { themes as atmospheres, roomTypes as rooms } from './rooms.js';
+import { imageAssets } from './images.js';
 
 export const journeys = [
-  { slug: 'nature-escape', number: '01', title: 'Coloane Nature Escape', detail: 'Coastal light, shaded trails and a slower morning rhythm.', color: 'green' },
-  { slug: 'cultural-discovery', number: '02', title: 'Coloane Cultural Discovery', detail: 'Village lanes, old façades and stories held close to the sea.', color: 'blue' }
+  { slug: 'nature-escape', number: '01', title: 'Coloane Nature Escape', detail: 'Coastal light, shaded trails and a slower morning rhythm.', color: 'green', image: imageAssets.natureEscape.filename },
+  { slug: 'cultural-discovery', number: '02', title: 'Coloane Cultural Discovery', detail: 'Village lanes, old façades and stories held close to the sea.', color: 'blue', image: imageAssets.culturalDiscovery.filename }
 ];
 
 export const experiences = [

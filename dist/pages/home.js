@@ -1,4 +1,4 @@
-import { atmospheres, rooms, journeys, experiences, products } from '../data/content.js';
+import { atmospheres, rooms, journeys, experiences, products } from '../data/content.js?v=20261121-3';
 import { L, localize } from './i18n.js';
 
 const c = (en, zhCN, zhTW = zhCN) => localize(L(en, zhCN, zhTW));

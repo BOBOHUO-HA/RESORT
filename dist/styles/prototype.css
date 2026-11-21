@@ -6,6 +6,19 @@ body { background: var(--ivory); }
 .prototype-hero h1 small { display: block; margin-top: 22px; font-family: var(--sans); font-size: .22em; letter-spacing: .25em; }
 .prototype-hero > div > p:not(.eyebrow) { max-width: 520px; color: #494137; font-family: var(--serif); font-size: 1.25rem; line-height: 1.65; }
 .prototype-hero > img { width: 100%; height: 600px; object-fit: cover; border: 1px solid var(--line); }
+.journey-detail-hero { min-height: 780px; display: grid; grid-template-columns: minmax(0,1.12fr) minmax(420px,.88fr); align-items: stretch; padding-top: 88px; background: var(--paper); }
+.journey-detail-hero__media { min-width: 0; margin: 0; overflow: hidden; background: #e9dcc6; }
+.journey-detail-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.journey-detail-hero--nature-escape .journey-detail-hero__media img { object-position: 52% center; }
+.journey-detail-hero--cultural-discovery .journey-detail-hero__media img { object-position: 50% center; }
+.journey-detail-hero__panel { display: flex; flex-direction: column; justify-content: center; padding: clamp(55px,6vw,100px); background: linear-gradient(135deg,rgba(250,248,241,.97),rgba(243,231,209,.9)); }
+.journey-detail-hero__panel h1 { max-width: 720px; margin: 0 0 28px; color: var(--forest); font-family: var(--serif); font-size: clamp(3.8rem,5.5vw,6.8rem); font-weight: 400; letter-spacing: -.045em; line-height: .94; }
+.journey-detail-hero__lead { max-width: 620px; margin-bottom: 34px; color: #494137; font-family: var(--serif); font-size: clamp(1.08rem,1.4vw,1.3rem); line-height: 1.68; }
+.journey-detail-hero__price { display: grid; gap: 5px; margin-bottom: 34px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.journey-detail-hero__price span { color: var(--terracotta); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.journey-detail-hero__price strong { color: var(--forest); font-family: var(--serif); font-size: 1.45rem; font-weight: 400; }
+.journey-detail-hero__price small { color: var(--ink-soft); }
+.journey-detail-hero .button-row { gap: 14px; }
 .prototype-intro { padding-top: var(--space); padding-bottom: 65px; }
 .prototype-intro h2 { max-width: 920px; margin: 0; color: var(--forest); }
 .prototype-intro > p:last-child { color: var(--ink-soft); }
@@ -26,6 +39,8 @@ body { background: var(--ivory); }
 .detail-ledger p { margin: 0; }
 .detail-ledger > div:first-child { display: grid; gap: 6px; }
 .detail-ledger small, .catalog-price-note { color: var(--ink-soft); }
+.detail-ledger--availability { grid-template-columns: 1fr; max-width: 920px; margin-top: 48px; margin-bottom: 0; }
+.detail-ledger--availability > div { max-width: 800px; }
 .workshop-upgrade { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(45px,8vw,110px); padding-top: var(--space); padding-bottom: var(--space); }
 .workshop-upgrade h2 { color: var(--forest); }
 .workshop-option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -256,6 +271,12 @@ body { background: var(--ivory); }
   .gallery-lightbox img { height: auto; max-height: 64dvh; }
   .gallery-lightbox figcaption { min-height: 260px; }
   .gallery-lightbox__nav--next { right: 12px; }
+  .journey-detail-hero { min-height: 0; grid-template-columns: 1fr; padding-top: 88px; }
+  .journey-detail-hero__media { aspect-ratio: 16 / 9; }
+  .journey-detail-hero__media img { object-fit: cover; object-position: center; }
+  .journey-detail-hero__panel { padding: 52px max(var(--gutter),28px) 58px; }
+  .journey-detail-hero__panel h1 { max-width: 680px; font-size: clamp(3.4rem,10vw,5.2rem); }
+  .journey-detail-hero__lead { max-width: 680px; }
 }
 @media (max-width: 560px) {
   .prototype-hero { padding: 105px 20px 55px; }
@@ -263,6 +284,17 @@ body { background: var(--ivory); }
   .prototype-hero > div { padding-right: 0; }
   .detail-ledger, .quiz__choices, .product-grid, .form-grid, .booking-review, .contact-grid { grid-template-columns: 1fr; }
   .detail-ledger .button { justify-self: start; }
+  .journey-detail-hero { padding-top: 72px; }
+  .journey-detail-hero__media { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--line); }
+  .journey-detail-hero__panel { padding: 35px 20px 42px; }
+  .journey-detail-hero__panel .eyebrow { margin-bottom: 15px; font-size: .65rem; line-height: 1.55; }
+  .journey-detail-hero__panel h1 { margin-bottom: 20px; font-size: clamp(2.65rem,13.5vw,4rem); line-height: 1.01; }
+  .journey-detail-hero__lead { margin-bottom: 25px; font-size: 1.05rem; line-height: 1.68; }
+  .journey-detail-hero__price { margin-bottom: 27px; padding: 17px 0; }
+  .journey-detail-hero__price strong { font-size: 1.3rem; }
+  .journey-detail-hero .button-row { align-items: stretch; flex-direction: column; width: 100%; gap: 11px; }
+  .journey-detail-hero .button { width: 100%; }
+  .detail-ledger--availability { margin-top: 38px; padding-top: 24px; padding-bottom: 24px; }
   .journey-catalog article > div, .experience-catalog article > div { padding: 32px 24px 40px; }
   .quiz__choices button { min-height: 140px; }
   .shop-toolbar { align-items: flex-start; flex-direction: column; }

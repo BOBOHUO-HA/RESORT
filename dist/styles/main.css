@@ -252,14 +252,16 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
 
 /* Scent */
 .scent { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(60px, 10vw, 150px); padding-top: var(--space); padding-bottom: var(--space); }
-.scent__visual { position: relative; min-height: 570px; display: grid; place-items: center; overflow: hidden; background: #e6ddc9; }
-.scent__visual::before { content: ''; position: absolute; inset: 7%; border: 1px solid rgba(73,56,44,.15); }
-.scent__ring { position: absolute; width: 57%; aspect-ratio: 1; border: 1px solid rgba(36,76,63,.35); border-radius: 50%; }
-.scent__line { position: absolute; width: 65%; height: 42%; border-top: 3px solid var(--terracotta); border-radius: 50%; transform: rotate(-22deg); }
-.scent__leaf { position: absolute; width: 100px; height: 190px; background: repeating-linear-gradient(78deg, transparent 0 28px, rgba(79,111,89,.42) 29px 31px, transparent 32px 53px); }
-.scent__leaf--one { left: 12%; bottom: 6%; transform: rotate(-26deg); }.scent__leaf--two { top: 3%; right: 10%; transform: rotate(155deg); }
-.scent__visual p { position: relative; z-index: 2; margin: 0; color: var(--forest); font-family: var(--serif); font-size: clamp(1.7rem, 3.2vw, 3.3rem); font-style: italic; line-height: 1.4; text-align: center; }
-.scent__visual em { color: var(--blue); }
+.scent__visual { position: relative; min-height: 640px; overflow: hidden; background: #e6ddc9; isolation: isolate; }
+.scent__visual::before { content: ''; position: absolute; z-index: 0; inset: 5%; border: 1px solid rgba(73,56,44,.17); pointer-events: none; }
+.scent__visual::after { content: ''; position: absolute; z-index: 0; right: -9%; bottom: 7%; width: 64%; height: 30%; border-top: 1px solid rgba(180,109,73,.42); border-radius: 50%; transform: rotate(-9deg); pointer-events: none; }
+.scent-collage__item { position: absolute; z-index: 1; margin: 0; padding: 7px; background: #f7f1e5; border: 1px solid rgba(73,56,44,.18); box-shadow: 0 16px 35px rgba(73,56,44,.13); }
+.scent-collage__item img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.scent-collage__item figcaption { position: absolute; right: 16px; bottom: 15px; padding: 7px 11px 6px; color: var(--forest); background: rgba(250,248,241,.9); border-bottom: 1px solid rgba(36,76,63,.35); font-size: .57rem; font-weight: 700; letter-spacing: .14em; line-height: 1; text-transform: uppercase; backdrop-filter: blur(4px); }
+.scent-collage__item--forest figcaption { right: auto; left: 16px; }
+.scent-collage__item--forest { top: 7%; left: 7%; width: 59%; transform: rotate(-1.3deg); }
+.scent-collage__item--sea { z-index: 2; top: 35%; right: 6%; width: 48%; transform: rotate(1deg); }
+.scent-collage__item--nostalgia { z-index: 3; bottom: 6%; left: 13%; width: 48%; transform: rotate(-.7deg); }
 .scent__content { max-width: 570px; }
 .scent__content h2 { color: var(--forest); }
 .scent__content > p:not(.eyebrow,.scent-result) { max-width: 490px; color: var(--ink-soft); }
@@ -391,7 +393,9 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
   .experience > div > p:last-child { grid-column: 1; }
   .shop { grid-template-columns: 1fr; }
   .scent { grid-template-columns: 1fr; }
-  .scent__visual { min-height: 500px; }
+  .scent__visual { min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 40px; }
+  .scent-collage__item, .scent-collage__item--forest, .scent-collage__item--sea, .scent-collage__item--nostalgia { position: relative; inset: auto; width: auto; transform: none; }
+  .scent-collage__item--forest { grid-column: 1 / -1; width: 70%; justify-self: center; }
   .footer { grid-template-columns: 1fr 1fr; }
   .footer__brand, .newsletter { grid-column: 1 / -1; }
 }
@@ -446,7 +450,11 @@ h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
   .shop__shelf { grid-template-columns: 1fr 1fr; gap: 26px 10px; }
   .product, .product:nth-child(4), .product:nth-child(5) { grid-column: auto; margin-top: 0; }
   .product__object { width: 90%; }
-  .scent__visual { min-height: 390px; }
+  .scent__visual { grid-template-columns: 1fr; gap: 18px; min-height: 0; padding: 24px; }
+  .scent__visual::before { inset: 12px; }
+  .scent-collage__item--forest { grid-column: auto; width: auto; justify-self: stretch; }
+  .scent-collage__item { padding: 6px; }
+  .scent-collage__item figcaption { right: 13px; bottom: 13px; }
   .floor__map { width: 100%; padding: 8px 8px 0; }
   .map-pins { inset: 8px 8px 0; }
   .map-pins button { width: 29px; height: 29px; }

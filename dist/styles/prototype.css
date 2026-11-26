@@ -121,9 +121,10 @@ body { background: var(--ivory); }
 .floor-explorer { background: var(--paper); color: var(--brown); }
 .floor-explorer .prototype-intro h2 { color: var(--forest); }
 .floor-interactive { position: relative; width: min(calc(100% - (var(--gutter)*2)),1400px); margin: 0 auto; }
-.floor-interactive > img { width: 100%; }
-.floor-interactive > button { position: absolute; left: var(--x); top: var(--y); width: 36px; height: 36px; display: grid; place-items: center; transform: translate(-50%,-50%); color: var(--ivory); background: var(--forest); border: 2px solid var(--ivory); border-radius: 50%; cursor: pointer; }
-.floor-interactive > button[aria-pressed="true"] { background: var(--terracotta); }
+.floor-interactive__map { position: relative; width: 100%; aspect-ratio: 3 / 2; }
+.floor-interactive__map > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.floor-interactive__map > button { position: absolute; left: var(--x); top: var(--y); width: 36px; height: 36px; display: grid; place-items: center; transform: translate(-50%,-50%); color: var(--ivory); background: var(--forest); border: 2px solid var(--ivory); border-radius: 50%; cursor: pointer; }
+.floor-interactive__map > button[aria-pressed="true"] { background: var(--terracotta); }
 .floor-card { position: absolute; right: 3%; bottom: 4%; max-width: 340px; padding: 22px; background: rgba(250,248,241,.94); border: 1px solid var(--line); }
 .floor-card strong { color: var(--forest); font-family: var(--serif); font-size: 1.5rem; }
 
@@ -295,7 +296,19 @@ body { background: var(--ivory); }
   .journey-detail-hero .button-row { align-items: stretch; flex-direction: column; width: 100%; gap: 11px; }
   .journey-detail-hero .button { width: 100%; }
   .detail-ledger--availability { margin-top: 38px; padding-top: 24px; padding-bottom: 24px; }
-  .journey-catalog article > div, .experience-catalog article > div { padding: 32px 24px 40px; }
+  .journey-catalog article, .experience-catalog article { display: flex; flex-direction: column; min-height: 0; gap: 0; }
+  .journey-catalog, .experience-catalog { gap: 36px; }
+  .journey-catalog article > img, .journey-catalog article:nth-child(even) > img, .experience-catalog article > img, .experience-catalog article:nth-child(even) > img { display: block; flex: none; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: #e9dcc6; }
+  .journey-catalog article > div, .experience-catalog article > div { display: flex; flex-direction: column; width: 100%; padding: 26px 22px 32px; background: var(--ivory); }
+  .journey-catalog h2, .experience-catalog h2 { max-width: 100%; margin: 8px 0 18px; font-size: clamp(2rem, 8.8vw, 2.9rem); line-height: 1.07; letter-spacing: -.035em; overflow-wrap: anywhere; }
+  .journey-catalog article > div > p:not(.eyebrow), .experience-catalog article > div > p:not(.eyebrow) { margin-bottom: 16px; color: var(--brown); line-height: 1.65; }
+  .journey-catalog .catalog-price-note { color: var(--ink-soft); }
+  .journey-catalog .button-row { display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin-top: 12px; }
+  .journey-catalog .button, .experience-catalog .button { min-height: 48px; width: 100%; padding-inline: 18px; text-align: center; }
+  .experience-catalog article > div > button { margin-top: 10px; }
+  .floor-interactive__map > button { width: 30px; height: 30px; font-size: .75rem; }
+  .floor-interactive__map > button::before { content: ''; position: absolute; inset: -7px; border-radius: 50%; }
+  .floor-card { margin-top: 14px; padding: 18px; }
   .quiz__choices button { min-height: 140px; }
   .shop-toolbar { align-items: flex-start; flex-direction: column; }
   .bag-button { align-self: stretch; }
